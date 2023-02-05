@@ -60,7 +60,7 @@ public class UsrMemberController {
 	@RequestMapping("/usr/member/doLogout")
 	@ResponseBody
 	public ResultData doLogout(HttpSession httpSession) {
-		boolean isLogouted = false;
+		boolean isLogouted = false; // isLogined
 
 		if (httpSession.getAttribute("loginedMemberId") == null) {
 			isLogouted = true;
