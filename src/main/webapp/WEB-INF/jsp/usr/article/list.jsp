@@ -8,31 +8,38 @@
   <div class="container mx-auto px-3">
     <div class="table-box-type-1">
       <table>
-        <thead>
-          <tr>
-            <th>번호</th>
-            <th>작성날짜</th>
-            <th>수정날짜</th>
-            <th>작성자</th>
-            <th>제목</th>
-          </tr>
-        </thead>
-        <tbody>
-          <c:forEach var="article" items="${articles}">
+        <colgroup>
+            <col width="50" />
+            <col width="150" />
+            <col width="150" />
+            <col width="150" />
+            <col />
+          </colgroup>
+          <thead>
             <tr>
-              <td>${article.id}</td>
-              <td>${article.regDate.substring(2, 16)}</td>
-              <td>${article.updateDate.substring(2, 16)}</td>
-              <td>${article.memberId}</td>
-              <td>
-                <a href="../article/detail?id=${article.id}">${article.title}</a>
-              </td>
+              <th>번호</th>
+              <th>작성날짜</th>
+              <th>수정날짜</th>
+              <th>작성자</th>
+              <th>제목</th>
             </tr>
-          </c:forEach>
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            <c:forEach var="article" items="${articles}">
+              <tr>
+                <td>${article.id}</td>
+                <td>${article.regDate.substring(2, 16)}</td>
+                <td>${article.updateDate.substring(2, 16)}</td>
+                <td>${article.memberId}</td>
+                <td>
+                  <a href="../article/detail?id=${article.id}">${article.title}</a>
+                </td>
+              </tr>
+            </c:forEach>
+          </tbody>
+        </table>
+      </div>
     </div>
-  </div>
-</section>
-
-<%@ include file="../common/foot.jspf"%>
+  </section>
+  
+  <%@ include file="../common/foot.jspf"%>
