@@ -11677,3 +11677,28 @@ Unconditional classes:
 2023-02-06 21:40:41 [DEBUG] o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
 2023-02-06 21:40:41 [INFO ] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
 2023-02-06 21:40:41 [DEBUG] o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2023-02-06 21:40:43 [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-06 21:40:43 [INFO ] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-02-06 21:40:43 [INFO ] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-02-06 21:43:28 [INFO ] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-02-06 21:43:28 [DEBUG] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Change set: [C:\sts-4.17.2.RELEASE-workspace\demo\target\classes [C:\sts-4.17.2.RELEASE-workspace\demo\target\classes\application.yml (MODIFY)]]
+2023-02-06 21:43:28 [DEBUG] o.s.boot.devtools.restart.Restarter - Restarting application
+2023-02-06 21:43:28 [DEBUG] o.s.boot.devtools.restart.Restarter - Stopping application
+2023-02-06 21:43:28 [DEBUG] o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+2023-02-06 21:43:28 [DEBUG] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@10d71f02, started on Mon Feb 06 21:40:40 KST 2023
+2023-02-06 21:43:28 [DEBUG] o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+2023-02-06 21:43:28 [DEBUG] o.s.c.s.DefaultLifecycleProcessor - Bean 'webServerGracefulShutdown' completed its stop procedure
+2023-02-06 21:43:28 [DEBUG] o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483646
+2023-02-06 21:43:28 [INFO ] o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8011"]
+2023-02-06 21:43:28 [INFO ] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2023-02-06 21:43:28 [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-02-06 21:43:28 [INFO ] o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8011"]
+2023-02-06 21:43:28 [INFO ] o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8011"]
+2023-02-06 21:43:28 [DEBUG] o.s.c.s.DefaultLifecycleProcessor - Bean 'webServerStartStop' completed its stop procedure
+2023-02-06 21:43:28 [DEBUG] o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase -2147483647
+2023-02-06 21:43:28 [DEBUG] o.s.c.s.DefaultLifecycleProcessor - Bean 'springBootLoggingLifecycle' completed its stop procedure
+2023-02-06 21:43:28 [DEBUG] o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2023-02-06 21:43:28 [DEBUG] o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2023-02-06 21:43:28 [DEBUG] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-06 21:43:28 [DEBUG] o.s.b.d.r.c.RestartClassLoader - Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@2a45fa62
+2023-02-06 21:43:28 [DEBUG] o.s.boot.devtools.restart.Restarter - Starting application com.sbs.exam.demo.DemoApplication with URLs [file:/C:/sts-4.17.2.RELEASE-workspace/demo/target/classes/]
