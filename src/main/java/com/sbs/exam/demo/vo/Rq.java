@@ -66,4 +66,8 @@ public class Rq { // Request 를 조금 쉽게 쓰려고 커스텀
 	public void login(Member member) {
 		session.setAttribute("loginedMemberId", member.getId());
 	}
+	
+	public void logout() {
+		session.removeAttribute("loginedMemberId");
+	}
 }
