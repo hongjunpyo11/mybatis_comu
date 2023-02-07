@@ -19,7 +19,7 @@ public class Ut {
 		return String.format(format, args);
 	}
 	
-	public static String jsHistoryBack(String msg) {
+	public static String jsHistoryBack(String msg) { // 경고창을 띄워주고 백
 		if (msg == null) {
 			msg = "";
 		}
@@ -35,7 +35,7 @@ public class Ut {
 				""", msg);
 	}
 
-	public static String jsReplace(String msg, String uri) {
+	public static String jsReplace(String msg, String uri) { // replace는 히스토리가 남지 않음 전전 페이지로 백
 		if (msg == null) {
 			msg = "";
 		}
