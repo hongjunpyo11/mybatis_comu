@@ -7,13 +7,12 @@ import com.sbs.exam.demo.util.Ut;
 import com.sbs.exam.demo.vo.Member;
 import com.sbs.exam.demo.vo.ResultData;
 
+import lombok.RequiredArgsConstructor;
+
 @Service
+@RequiredArgsConstructor
 public class MemberService {
-	private MemberRepository memberRepository;
-	
-	public MemberService(MemberRepository memberRepository) {
-		this.memberRepository = memberRepository;
-	}
+	private final MemberRepository memberRepository;
 
 	public ResultData<Integer> join(String loginId, String loginPw, String name, String nickname,
 									String cellphoneNo, String email) {

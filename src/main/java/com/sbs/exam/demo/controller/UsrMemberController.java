@@ -12,13 +12,12 @@ import com.sbs.exam.demo.vo.Member;
 import com.sbs.exam.demo.vo.ResultData;
 import com.sbs.exam.demo.vo.Rq;
 
-@Controller
-public class UsrMemberController {
-	private MemberService memberService;
+import lombok.RequiredArgsConstructor;
 
-	public UsrMemberController(MemberService memberService) {
-		this.memberService = memberService;
-	}
+@Controller
+@RequiredArgsConstructor
+public class UsrMemberController {
+	private final MemberService memberService;
 	
 	@RequestMapping("/usr/member/doJoin")
 	@ResponseBody

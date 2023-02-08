@@ -9,13 +9,12 @@ import com.sbs.exam.demo.util.Ut;
 import com.sbs.exam.demo.vo.Article;
 import com.sbs.exam.demo.vo.ResultData;
 
+import lombok.RequiredArgsConstructor;
+
 @Service
+@RequiredArgsConstructor
 public class ArticleService {
-	private ArticleRepository articleRepository;
-	
-	public ArticleService(ArticleRepository articleRepository) {
-		this.articleRepository = articleRepository;
-	}
+	private final ArticleRepository articleRepository;
 
 	public ResultData<Integer> writeArticle(int memberId, String title, String body) {
 		articleRepository.writeArticle(memberId, title, body);
