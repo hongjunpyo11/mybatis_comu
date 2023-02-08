@@ -6,11 +6,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
+import org.springframework.stereotype.Component;
+
 import com.sbs.exam.demo.service.MemberService;
 import com.sbs.exam.demo.util.Ut;
 
 import lombok.Getter;
 
+@Component
+@Scope(value = "request", proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class Rq { // Request 를 조금 쉽게 쓰려고 커스텀
 	@Getter
 	private boolean logined;
@@ -42,6 +48,8 @@ public class Rq { // Request 를 조금 쉽게 쓰려고 커스텀
 		this.logined = isLogined;
 		this.loginedMemberId = loginedMemberId;
 		this.loginedMember = loginedMember;
+		
+		this.req.setAttribute("rq", this);
 	}
 	
 	public void printHistoryBackJs(String msg) {
