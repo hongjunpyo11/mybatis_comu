@@ -74,4 +74,12 @@ public class Rq { // Request 를 조금 쉽게 쓰려고 커스텀
 		req.setAttribute("historyBack", true);
 		return "common/js";
 	}
+
+	public String jsHistoryBack(String msg) {
+		return Ut.jsHistoryBack(msg);
+	}
+
+	public String jsReplace(String msg, String uri) {
+		return Ut.jsReplace(msg, uri);
+	}
 }
