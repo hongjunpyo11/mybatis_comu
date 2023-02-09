@@ -7,19 +7,21 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Member {
+public class Reply {
 	private int id;
 	private String regDate;
 	private String updateDate;
-	private String loginId;
-	private String loginPw;
-	private int authLevel;
-	private String name;
-	private String nickname;
-	private String cellphoneNo;
-	private String email;
-	private boolean delStatus;
-	private String delDate;
+	private int memberId;
+	private String relTypeCode;
+	private int relId;
+	private String body;
+	private int hitCount;
+	private int goodReactionPoint;
+	private int badReactionPoint;
+	
+	private String extra__writerName;
+	private boolean extra__actorCanModify;
+	private boolean extra__actorCanDelete;
 	
 	public String getForPrintType1RegDate() {
 		return regDate.substring(2, 16).replace(" ", "<br>");
@@ -36,8 +38,8 @@ public class Member {
 	public String getForPrintType2UpdateDate() {
 		return regDate.substring(2, 16);
 	}
-
-    public boolean isAdmin() {
-		return this.authLevel == 7;
-    }
+	
+	public String getForPrintBody() {
+		return body.replaceAll("\n", "<br>");
+	}
 }
