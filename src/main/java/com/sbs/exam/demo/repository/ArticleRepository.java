@@ -57,12 +57,24 @@ public interface ArticleRepository {
 			<if test="boardId != 0">
 				AND A.boardId = #{boardId}
 			</if>
+			<if test="searchKeyword != ''">
+				<choose>
+					<when test="searchKeywordTypeCode == 'title'">
+						AND A.title LIKE CONCAT('%', #{searchKeyword}, '%')
+					</when>
+					<when test="searchKeywordTypeCode == 'body'">
+						AND A.body LIKE CONCAT('%', #{searchKeyword}, '%')
+					</when>
+					<otherwise>
+						AND (
+							A.title LIKE CONCAT('%', #{searchKeyword}, '%')
+							OR 
+							A.body LIKE CONCAT('%', #{searchKeyword}, '%')
+						)
+					</otherwise>
+				</choose>
+			</if>
 			</script>
 			""")
-	public int getArticlesCount(@Param("boardId") int boardId);
+	public int getArticlesCount(int boardId, String searchKeywordTypeCode, String searchKeyword);
 }
-
-/*
- * getForPrintArticle => 조인을해서 추가정보를 가져온다 현재 로그인한 회원 번호 가져와서 그 회원이 게시글을 수정이나 삭제를 할 수 있는지 정보까지 제공
- * getArticle => 단순히 select * from article
- */
