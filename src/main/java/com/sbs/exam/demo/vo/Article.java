@@ -25,7 +25,7 @@ public class Article {
 	}
 
 	public String getForPrintType1UpdateDate() {
-		return regDate.substring(2, 16).replace(" ", "<br>");
+		return updateDate.substring(2, 16).replace(" ", "<br>");
 	}
 
 	public String getForPrintType2RegDate() {
